@@ -2,11 +2,11 @@
 
 Aplicacion web tipo kanban donde se pueden crear tableros, listas y tarjetas.
 
-Este proyecto es una practica personal para mejorar mis habilidades con Angular, manejo de estado en el frontend y experiencias de usuario basadas en tableros tipo Trello.
+Este proyecto es una practica personal para mejorar mis habilidades con **Angular**, **Typescript**, manejo de estado en el frontend y experiencias de usuario basadas en tableros tipo Trello.
 
-> 🔧 Estado actual: **MVP funcional** 
-> ✅ Se pueden crear tableros, listas y cards, y moverlas con drag & drop.
-> 🚧 Pendiente: contenido detallado en las cards mediante diálogos y mejoras visuales.
+> 🔧 Estado actual: **MVP funcional**  
+> ✅ Se pueden crear tableros, listas y cards, y moverlas con drag & drop.  
+> 🚧 Pendiente: contenido detallado en las cards mediante diálogos y mejoras visuales.  
 
 ---
 
