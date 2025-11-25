@@ -1,0 +1,96 @@
+.list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 200px;
+  min-height: 3.75rem;
+  max-height: 70vh;
+  color: var(--color-text);
+  border-radius: 5px;
+  border: 2px solid var(--color-border);
+  background-color: var(--color-border);
+  padding-bottom: 5px;
+}
+
+.list-header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.list-container .list-title {
+  padding-top: 0.5rem;
+  margin-left: 1.5rem;
+  font-weight: bold;
+  height: 1.87rem;
+}
+.list-container .list-add-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+  width: 90%;
+  margin-top: 1rem;
+  height: 1.87rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.5s ease;
+}
+.list-container .list-add-card:hover {
+  background-color: var(--color-border-hover);
+  transform: scale(1.1);
+  /* box-shadow: 0 0 0 20px rgba(63, 81, 181, 0.2); */
+}
+.addCard-container {
+  width: 100%;
+  height: auto;
+}
+.addCard-textarea {
+  width: 100%;
+  min-height: 36px;
+  max-height: 160px;
+  margin: 0;
+  border: none;
+  resize: none;
+  overflow: auto;
+}
+.addCard-textarea::placeholder{
+    margin-left: 10px;
+}
+.addCard-textarea:focus {
+  outline: none;
+  border-color: #3f51b5; /* azul Material */
+  box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.2);
+}
+
+.addCard-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.confirm-btn {
+  flex: 1;          /* ocupa todo el espacio disponible */
+  max-width: 90%;   /* se queda con la mayor parte */
+}
+.close-btn {
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;   /* ocupa solo lo necesario para el ícono */
+  margin-left: auto; /* empuja la X a la derecha */
+}
+
+.cards-drop-container {
+  min-height: 12px;
+  overflow-y: auto;
+}
+.cdk-drag-preview {
+  box-shadow: 0 8px 24px rgba(0,0,0,.2);
+  border-radius: 8px;
+}
+.cdk-drag-placeholder {
+  opacity: .25;
+}
+.card-drag-wrapper{
+  display: block; 
+  width: 100%;
+}

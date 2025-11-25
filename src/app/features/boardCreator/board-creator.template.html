@@ -1,0 +1,39 @@
+<!-- Si esta vacio, muestre un backgroud con haz click para crear tu primer tablero. -->
+ <!-- Si tiene un tablero, arriba a la derecha un rectangulo con el nombre del tablero, y un rectangulo con un + al lado. -->
+@if (boards().length > 0) {
+    <!-- Si hay favoritos se crea un fav --> 
+     @if (hasFav()) {
+        <div class="text-container">
+            <h1>Favoritos:</h1>
+            <hr>
+        </div>
+        <div class="card-container">
+            @for (item of boards(); track $index) {
+                @if (item.isFav) {
+                    <board-card [name]="item.name" [color]="item.color" [isFav]="item.isFav" [boardId]="item.id"></board-card>
+                }
+            }
+        </div>
+     }
+    <div class="text-container">
+         <h1>Tableros:</h1>
+         <hr>
+     </div>
+    <div class="card-container">
+        @for (item of boards(); track $index) {
+            @if (!item.isFav) {
+                <board-card [name]="item.name" [color]="item.color" [isFav]="item.isFav" [boardId]="item.id"></board-card>
+            }
+        }
+    </div>
+    <div class="board-creator-buttons">
+        <button matFab="filled" (click)="openDialog()" matTooltip="Crear Nuevo tablero"><mat-icon>add</mat-icon> </button>
+        <button matFab="tonal" (click)="borrarDatos()" matTooltip="Eliminar Todos los tableros"><mat-icon>delete</mat-icon></button>
+    </div>
+}@else {
+    <div class="board-creator-container" (click) ="openDialog()">
+       <p>No tienes ningun tablero</p>
+       <p>Presiona para crear...</p>
+       <mat-icon class="board-creator-icon" aria-label="Crear Tablero" fontIcon="add"></mat-icon>
+   </div>
+}

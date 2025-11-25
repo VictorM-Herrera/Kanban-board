@@ -1,0 +1,54 @@
+.dialog-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: inherit;
+    overflow: hidden;
+}
+.dialog-title{
+    color: var(--color-text);
+}
+.dialog-form{
+    width: 90%;
+}
+.dialog-buttons-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+}
+.color-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.color-display{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding-top: 5px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.button-red{
+    background-color: var(--color-error) !important;
+}
+
+.color-row {
+  display: flex; align-items: center; gap: .5rem;
+}
+.color-preview {
+  width: 24px; height: 24px; border-radius: 50%;
+  border: 1px solid rgba(0,0,0,.15);
+}
+
+.visually-hidden {
+  position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; padding: 0; border: 0;
+}
+
+

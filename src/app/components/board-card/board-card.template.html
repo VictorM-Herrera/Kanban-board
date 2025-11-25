@@ -1,0 +1,8 @@
+<!-- Click aca te dirige a una ruta con el id del tablero pasado por servicio -->
+<div class="boardCard-container" [routerLink]="['/board', boardId]">
+        <mat-icon class="boardCard-fav" matTooltip="Añadir a favoritos" (click)="$event.stopPropagation(); addToFav()">{{isFav ? 'star' : 'star_border'}}</mat-icon>
+    <div class="boardCard-color" [style.background-color]="color"></div>
+    <div class="boardCard-name" matTooltip="{{name}}">
+        {{name}}
+    </div>
+</div>

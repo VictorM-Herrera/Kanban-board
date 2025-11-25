@@ -1,0 +1,55 @@
+<div class="list-container">
+  <div class="list-header full-width">
+    <span class="drag-handle cursor-grab" cdkDragHandle>
+      <mat-icon>drag_indicator</mat-icon>
+    </span>
+    <span class="list-title no-select">{{ name }}</span>
+  </div>
+
+  <div
+    class="cards-drop-container full-width"
+    cdkDropList
+    [id]="id"
+    [cdkDropListConnectedTo]="connectedTo()"
+    [cdkDropListData]="{ listId: id }"
+    (cdkDropListDropped)="dropCards($event)"
+  >
+    @if (listData()?.cards?.length) { @for (item of listData()?.cards; track item.id) {
+    <!-- armar la card -->
+    <div cdkDrag class="card-drag-wrapper overflow-hidden full-width">
+      <card-component
+        class="full-width"
+        [cardName]="item.title"
+        [isChecked]="item.isChecked"
+        [boardId]="boardId"
+        [listId]="id"
+        [id]="item.id"
+      ></card-component>
+    </div>
+    } }
+  </div>
+
+  @if (!editing()) {
+  <span #addCard class="list-add-card no-select" (click)="editing.set(true)">
+    <mat-icon>add</mat-icon>
+    Añade una tarjeta
+  </span>
+  }@else{
+  <div #addCardContainer class="addCard-container" (keydown)="onKeyDown($event)">
+    <textarea
+      #addCardInput
+      autofocus
+      class="addCard-textarea"
+      placeholder="Introduce el titulo"
+      (input)="onCardInput(addCardInput)"
+      [value]="cardName()"
+    ></textarea>
+    <div class="addCard-buttons">
+      <button mat-flat-button class="confirm-btn" (click)="confirm(addCardInput)">Confirmar</button>
+      <button mat-icon-button class="close-btn" (click)="cancel()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+  </div>
+  }
+</div>

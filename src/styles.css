@@ -1,1 +1,78 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --color-bg: #F5F7FA;
+  --color-text: #1F2937;
+  --color-placeholder: #9CA3AF;
+  --color-border: #E5E7EB;
+  --color-border-hover: #F3F4F6;
+  --color-primary: #3B82F6;
+  --color-success: #10B981;
+  --color-error: #EF4444;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.full-width{
+  width: 100%;
+}
+.no-select{
+  user-select: none;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+.cursor-grab{
+  cursor: grab;
+}
+.cursor-grab:active{
+  cursor: grabbing;
+}
+
+.overflow-hidden{
+  overflow: hidden;
+}
+
+.mat-mdc-dialog-surface{
+  border: 2px solid var(--color-border);
+  overflow: hidden;
+  padding: 1rem;
+}
+

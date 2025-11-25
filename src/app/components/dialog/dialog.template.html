@@ -1,0 +1,31 @@
+<div class="dialog-container">
+  <h1 class="dialog-title">Crear nuevo tablero</h1>
+  <form class="dialog-form" (submit)="$event.preventDefault()">
+    <mat-form-field class="full-width">
+      <mat-label>Nombre del nuevo tablero</mat-label>
+      <input matInput (input)="name.set($event.target.value)" />
+    </mat-form-field>
+    <div class="color-container">
+        <input
+      #colorInput
+      type="color"
+      [value]="color()"
+      (input)="color.set($event.target.value)"
+      class="visually-hidden"
+    />
+      <button type="button" matIconButton aria-label="Elegir color" matTooltip="Elegir color del tablero" (click)="colorInput.click()">
+        <mat-icon>palette</mat-icon>
+      </button>
+      <div class="color-display">
+        <div class="color-preview" [style.background]="color()"></div>
+        <span class="color-hex">{{ color() }}</span>
+      </div>
+    </div>
+  </form>
+  <div class="dialog-buttons-container full-width">
+    <button matButton="tonal" (click)="onCancel()">Cancelar</button>
+    <button matButton="filled" (click)="onConfirm()" [disabled]="!name().trim().length">
+      Confirmar
+    </button>
+  </div>
+</div>

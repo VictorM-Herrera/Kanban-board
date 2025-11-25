@@ -1,0 +1,14 @@
+<div class="card-container">
+   
+   <div class="card-container-title no-select">
+      <mat-icon (click)="$event.stopPropagation(); handleCheck()"  matTooltip="Completar Tarea" >{{isChecked ? 'radio_button_checked'  : 'radio_button_unchecked'}}</mat-icon>
+      <!-- <mat-icon class="boardCard-fav" matTooltip="Añadir a favoritos" (click)="$event.stopPropagation(); addToFav()">{{isFav ? 'star' : 'star_border'}}</mat-icon> -->
+      {{cardName}}
+   </div>
+</div>
+<!-- portada (basicamente un rectangulo de color con 100%w) -->
+ <!-- Etiquetas (basicamente varios rectangulos de colores) -->
+<!-- nombre de la tarjeta -->
+ <!-- contenedor -->
+    <!-- fecha inic,fin, descripcion(icono txt), tarjetas adjuntas, inoco checklist, y "contador" -->
+ <!-- contenedor -->

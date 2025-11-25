@@ -1,0 +1,38 @@
+.boardCard-container{
+    width: 100%;
+    height: 100%;
+    width: 175px;
+    height: 108px;
+    border: 1px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.3s ease-in-out;
+}
+.boardCard-container:hover{
+    border: 1px solid var(--color-border);
+}
+
+.boardCard-container:hover .boardCard-fav{
+    opacity: 1;
+    transform: translate(0);
+}
+
+.boardCard-color{
+    width: 100%;
+    height: 80%;
+}
+.boardCard-name{
+    text-align: center;
+}
+
+.boardCard-fav{
+    position: absolute !important;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.3s ease, color 0.3s ease;
+    transform: translateX(-10px);
+}
+
+.boardCard-fav:hover{
+    color: var(--color-border);
+}

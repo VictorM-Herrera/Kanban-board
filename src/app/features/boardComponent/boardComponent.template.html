@@ -1,0 +1,30 @@
+<div class="board-container">
+  <div class="title-container">
+    <h1>{{ boardData()?.name }}</h1>
+    <div class="title-divider"></div>
+  </div>
+  <div
+    class="boardData-container"
+    cdkDropList
+    cdkDropListOrientation="horizontal"
+    (cdkDropListDropped)="onDropLists($event)"
+    [cdkDropListData]="boardData()?.lists"
+  >
+    @if (boardData()!.lists!.length) {
+    <!-- aca cargo siempre las listas -->
+    @for (item of boardData()?.lists; track item.id) {
+    <div cdkDrag class="list-drag-wrapper">
+      <list-component
+        [boardId]="boardData()!.id"
+        [id]="item.id"
+        [name]="item.name"
+      ></list-component>
+    </div>
+    }
+
+    <add-list-component [id]="boardData()!.id"></add-list-component>
+    }@else {
+    <add-list-component [id]="boardData()!.id"></add-list-component>
+    }
+  </div>
+</div>

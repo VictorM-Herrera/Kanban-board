@@ -1,0 +1,14 @@
+@if (!editing()) {
+    <div #addList class="addListContainer no-select" (click)="editing.set(true);">
+        <mat-icon>add</mat-icon>
+        <p>Añadir una lista</p>
+    </div>
+}@else {
+    <div class="addList-input-container" (keydown)="onKeyDown($event)">
+      <input autofocus class="addList-input" type="text" placeholder="Nombre" (input)="name.set($event.target.value)">
+        <div class="addList-buttons">
+          <button matButton="filled" (click)="cancel()">Cancelar</button>
+            <button matButton="filled" (click)="confirm()">Confirmar</button>
+        </div>
+    </div>
+}

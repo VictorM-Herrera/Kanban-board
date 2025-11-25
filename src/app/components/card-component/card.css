@@ -1,0 +1,35 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  height: 2.5rem;
+  border-radius: 5px;
+  background-color: var(--color-border-hover);
+  padding-top: 5px;
+  margin-bottom: 0.5rem;
+}
+
+.card-container-title {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0 0.5rem;
+  height: 100%;
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+.card-container-title .mat-icon {
+  font-size: 1.1em;
+  cursor: pointer;
+  width: 0;
+  height: 1em;
+  line-height: 1em;
+  overflow: hidden;
+  opacity: 0;
+  transition: width 0.2s ease, opacity 0.2s ease;
+}
+
+.card-container:hover .mat-icon {
+  width: 1em; 
+  opacity: 1;
+}

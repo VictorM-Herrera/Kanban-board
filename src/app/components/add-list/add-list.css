@@ -1,0 +1,51 @@
+.addListContainer {
+    width: 200px;
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--color-border);
+  padding: 1rem;
+  gap: 1rem;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.addListContainer:hover {
+  transform: scale(1.1);
+}
+
+.addList-input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  gap: 0.5rem;
+  font-family: Roboto, sans-serif;
+  border-radius: 5px;
+  background-color: var(--color-border);
+  padding: 1rem;
+}
+
+.addList-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.addList-input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.addList-input:focus {
+  outline: none;
+  border-color: #3f51b5; /* azul Material */
+  box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.2);
+}
+.addList-buttons button {
+  font-size: 0.8rem; /* texto más chico */
+  /* padding: 2px 8px;      menos espacio alrededor */
+  min-height: 30px; /* altura mínima */
+}
